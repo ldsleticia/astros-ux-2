@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Astro</title>
+</head>
+<body>
+
+<!-- Nav bar -->
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <a href="#"><img = src="img/logo.png" width="60px" height="60px"></a>
+            </div>
+            <ul>
+                <li>
+                    <!-- <a href="#">Home</a>
+                    <a href="#">About</a> -->
+                    <a href="#sessao1">Inicio</a>
+                    <a href="#sessao2">Curiosidades</a>
+                    <a href="#sessao3">Log in</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="sec1"></section>
+    </div>
+
+<!-- conteudo da pagina -->
+
+    <section class="container" id="sessao1">
+        <div class="galeria">
+
+            <img class="imgJs" src="img/galeria08.jpg" width="90%" class="ativa">
+            <h2 class="imgTxt h2 ativa"><span>Veja o universo com <br>outros olhos</span></h2>
+            <img class="imagem imgJs" src="img/galeria09.jpg" width="90%" >
+            <h2 class="imgTxt h2"><span> Um jeito divertido de <br> aprender</span></h2>
+            <img class="imagem imgJs" src="img/galeria10.jpg" width="90%">
+            <h2 class="imgTxt h2"><span> O universo ao <br> seu alcance</span></h2>
+            <!-- <img class="imagem imgJs" src="img/galeria04.jpg" width="90%">
+            <h2 class="imgTxt h2"><span> ndbcjddj <br> lsks</span></h2> -->
+
+        </div>
+    </section>
+
+    <section  class="container" id="sessao2">
+            <div class="card1"> 
+                <img src="img/curiosidade01.jpg" width="280px" class="curiosidade1">
+                <h5 class="">Ecos de Luz de V838 Monocerotis</h5>
+                <p class="">O Pisca Pisca Estelar</p>
+            </div> 
+    
+            <div class="card1"> 
+                <img src="img/curiosidade02.jpg" width="280px" class="curiosidade1">
+                <h5 class="">Os Pilares da Criação</h5>
+                <p class="">Até o Universo se Sustenta e Você Não</p>
+            </div> 
+    
+            <div class="card1"> 
+                <img src="img/curiosidade03.jpg" width="280px" class="curiosidade1">
+                <h5 class="">Berçário de Carina</h5>
+                <p class="">Até o Universo Precisa de Creche</p>
+            </div> 
+            <button type="button" class="btnCuriosidades">Para saber mais, faça login.</button>
+                    
+                            
+        </section>
+
+    <section  class="container" id="sessao3">
+            <div class="login">
+                <div class="login2">
+                    <h1>Para saber mais, faça login em <br> Astro.</h1>
+                    <input class="inputs" type="text" placeholder="Usuário"><br><br>
+                    <input class="inputs" type="password" placeholder="Senha"><br><br>
+                    <button class="btn entrar" onClick="window.location='menuLateral/principal.html';" value="click here" >Entrar</button>
+                    <button class="btn cadastrese" onClick="window.location='cadastro/cadastro.html';" value="click here" >Cadastre-se</button>
+                 </div>
+            </div>                            
+        </section>
+
+        <div class="footer container">
+
+        </div>
+
+
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

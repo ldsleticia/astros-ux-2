@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <title>Astros</title>
+</head>
+    <body ng-app="perfil" ng-controller="menuController">
+            <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <img src="https://openclipart.org/image/2400px/svg_to_png/211821/matt-icons_preferences-desktop-personal.png" class="user" alt="">
+                    <a href="#" ng-click="mostrarNoticias()" onclick="closeNav()">Noticias</a>
+                    <a href="#" ng-click="mostrarVideos()" onclick="closeNav()" >Videos</a>
+                    <a href="../jogo/joguinho.html" ng-click="mostrarJogos()" onclick="closeNav()">Jogos</a>
+                   <!--  <a href="#" ng-click="mostrarFavoritos()" onclick="closeNav()">Favoritos</a> -->
+                </div>
+                
+
+                <span style="font-size:30px;cursor:pointer;color:#B0E0E6" onclick="openNav()">&#9776; Perfil</span>
+
+                <section class="container" ng-show="noticias" id="sessao1">
+                <div class="galeria">
+
+                <img class="imgJs" src="https://2.bp.blogspot.com/-anl6X-P7gQ8/WEVhWpOLxSI/AAAAAAAAM9g/Wq2HRDdQIWAeueDPcLeysD7WGs34oKqxACLcB/s1600/V838.jpg" width="90%" class="ativa">
+                <h2 class="imgTxt h2 ativa"><span>Ecos de luz V838</span></h2>
+                <img class="imagem imgJs" src="../img/galeria09.jpg" width="90%" >
+                <h2 class="imgTxt h2"><span> Um jeito divertido de <br> aprender</span></h2>
+                <img class="imagem imgJs" src="../img/galeria10.jpg" width="90%">
+                <h2 class="imgTxt h2"><span> O universo ao <br> seu alcance</span></h2>
+                <img class="imagem imgJs" src="img/galeria04.jpg" width="90%">
+                <h2 class="imgTxt h2"><span> ndbcjddj <br> lsks</span></h2>
+                </div>
+                </section>
+
+
+                <!-- noticias -->
+                <section>
+                <div  class="cont1" ng-show="noticias">
+                    
+                    <div class="conteudo">
+                        <p>
+                            Então, ninguém sabe ao certo como, mas o V838 resolveu brilhar e parar várias vezes.
+
+                            <br>Do nada, em 2012, ela teve uma grande explosão  (eu sei, isso é normal no espaço mas essa foi diferente) e acabou sendo a estrela mais brilhante do universo. Mas do mesmo jeito que acendeu rápido, apagou.
+
+                            <br>No começo os cientistas acharam que a V838 estava jogando matéria no universo, mas depois eles perceberam que aquela claridade toda não era matéria sendo jogada no universo, era só o eco de luz (sacou de onde saiu o nome?) da super nova que explodiu dentro dela.
+
+                            <br>A V838 Mon, está a uns 20.000 anos-luz de distância da Terra (mais ou menos a distância que a 10/10 quer de você) na constelação de Monoceros, o Unicórnio. A imagem foi feita pelo Telescópio Espacial Hubble em Fevereiro de 2004 e o eco de luz observado tem mais ou menos seis anos-luz de diâmetro.
+                        </p>
+                    </div>
+
+                
+                </div>
+
+            </section>
+                <!-- videos -->
+                <section ng-show="videos">
+            <div class="vid">
+                    <div  class="videos">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FqE8IQtYkac?start=40" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videos">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0xbexEt4iIs?rel=0&amp;start=8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videos">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qLD7hwGhzE0?rel=0&amp;start=5" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videos">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2wfaz2JzSOM?start=14" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+            </div>
+        </section>
+
+                    <!-- jogos -->
+                <div ng-show="jogos" class="conteudo">
+                    <p>asdajkajkdasdakn</p>
+            </div>
+                
+                <!-- favoritos -->
+                <div ng-show="favoritos" class="conteudo">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bl8Q7Lt56y0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <script src="js/scripts.js"></script>
+                
+                <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+                
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+
+                
+                </script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+
+                <script>
+                    const app = angular.module('perfil', []);
+
+                app.controller('menuController', ($scope) => {
+
+                $scope.noticias = true;
+                $scope.videos = false;
+                $scope.jogos = false;
+                $scope.favoritos = false;
+
+                $scope.mostrarNoticias = () => {
+                    $scope.noticias = true;
+                    $scope.videos = false;
+                    $scope.jogos = false;
+                    $scope.favoritos = false;
+                }
+
+                $scope.mostrarVideos = () => {
+                    $scope.noticias = false;
+                    $scope.videos = true;
+                    $scope.jogos = false;
+                    $scope.favoritos = false;
+                }
+
+                $scope.mostrarJogos = () => {
+                    $scope.noticias = false;
+                    $scope.videos = false;
+                    $scope.jogos = true;
+                    $scope.favoritos = false;
+                }
+
+                $scope.mostrarFavoritos = () => {
+                    $scope.noticias = false;
+                    $scope.videos = false;
+                    $scope.jogos = false;
+                    $scope.favoritos = true;
+                }
+
+                });
+
+                    
+
+                </script>
+    </body>
+</html>
